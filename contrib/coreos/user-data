@@ -3,8 +3,8 @@
 coreos:
   etcd:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new
-    # uncomment the following line and replace it with your discovery URL
-    # discovery: https://discovery.etcd.io/12345693838asdfasfadf13939923
+    # export your discovery URL as DEIS_DISCOVERY_URL
+    discovery: $DEIS_DISCOVERY_URL
     addr: $private_ipv4:4001
     peer-addr: $private_ipv4:7001
   units:
